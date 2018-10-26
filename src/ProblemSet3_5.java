@@ -411,9 +411,6 @@ public class ProblemSet3_5 {
 			num1 = num3;
 		}
 		
-		int length = Integer.toString(n).length();
-		char[] number = String.valueOf(n).toCharArray();
-		
 		String suffix = "th";
 		
 		if (n < 1) {
@@ -421,11 +418,11 @@ public class ProblemSet3_5 {
 			return;
 		} else if (n >= 10 && n <= 19) {
 			suffix = "th";
-		} else if (number[length - 1] == '1') {
+		} else if (n % 10 == 1) {
 			suffix = "st";
-		} else if  (number[length - 1] == '2') {
+		} else if  (n % 10 == 2) {
 			suffix = "nd";
-		} else if (number[length - 1] == '3') {
+		} else if (n % 10 == 3) {
 			suffix = "rd";
 		} else {
 			suffix = "th";
